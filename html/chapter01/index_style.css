@@ -1,0 +1,13 @@
+h1{
+    display: none;
+}
+
+p{
+    font-size:xx-large; 
+    font-weight: 900; 
+    color: rgb(125, 102, 75);  
+    border: 2px solid rgb(125, 102, 75); 
+    padding: 20px; 
+    border-radius: 20px; 
+    background-color:#ffd8e0;
+}
