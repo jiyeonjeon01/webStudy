@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETAIL TABLE</title>
     <style>
-        table{
+        table {
             border: 1px solid black;
+            border-collapse: collapse;
             margin: 0 auto;
         }
         table td, table th{
@@ -14,17 +15,20 @@
             width: 100px;
             text-align: center;
         }
-        thead{
-            background-color: rbg(227, 191, 193);
+        thead {
+            background-color: rgb(227, 191, 191);
         }
-        tbody{
+        tbody {
             background-color: rgb(235, 231, 195);
+        }
+        tfoot {
+            background-color: rgb(148, 203, 227);
         }
     </style>
 </head>
 <body>
     <table>
-        <caption>버거 세트 가격</caption>
+        <caption>버거세트가격</caption>
         <thead>
             <tr>
                 <th>종류</th>
@@ -32,30 +36,29 @@
                 <th>용량</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <th>치즈버거</th>
-                <th>4500</th>
-                <th>&nbsp;</th>
-            </tr>
-            <tr>
-                <th>프라이</th>
-                <th>2000</th>
-                <th>중</th>
-            </tr>
-            <tr>
-                <th>음료</th>
-                <th>1500</th>
-                <th>중</th>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>가격</th>
-                <th>7000</th>
-                <th>할인</th>
-            </tr>
-        </tfoot>
+        
+       <tbody>
+        <tr>
+            <td>치즈버거</td>
+            <td>4500</td>
+            <td rowspan="2">중</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">
+                프라이: 2000<br>
+                음료: 2000</td>
+        </tr>
+        <!-- <tr>
+            <td>음료</td>
+            <td>1500</td>
+            <td>중</td>
+        </tr> -->
+       </tbody>
+       <tfoot>
+        <tr>
+            <th colspan="3">가격: 8000</th>
+        </tr>
+       </tfoot>
     </table>
     
 </body>
