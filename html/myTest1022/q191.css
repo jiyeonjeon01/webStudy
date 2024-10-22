@@ -1,0 +1,9 @@
+h2{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+}
+blockquote{
+    color: blue;
+}
