@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRONTEND APPLY</title>
+    <style>
+        form{
+            width: 500px;
+            border: 1px solid black;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 10px;
+        }
+        /* label {
+            display: inline-block;
+            width: 400px;
+            background-color: aqua;
+        }
+        textarea {
+            margin-left: 400px;
+        }
+
+        form div {
+            text-align: center;
+        } */
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <h1>프런트엔드 개발자 지원서</h1>
+
+        <br>
+
+        HTML CSS, 자바스크립트의 기술을 이햏고 실무 경험이 있는 분을 찾습니다. <br>
+
+        <hr><br>
+        
+        <h3>개인 정보</h3>
+        <blockquote>
+            <label for="name">이름</label>
+            <input type="text" name="name" id="이름" placeholder="공백 없이 입력하세요"><br>
+ 
+            <label for="phone">연락처</label>
+            <input type="text" name="phone" id="phone"><br><br>
+        </blockquote>
+
+        <h3>지원 분야</h3>
+        <blockquote>
+            <input type="radio" name="apply" id="apply1" value="1">
+            <label for="ticket1">웹 퍼블리싱</label><br>
+            <input type="radio" name="apply" id="apply2" value="2">
+            <label for="apply2">웹 애플리케이션 개발</label><br>
+            <input type="radio" name="apply" id="apply3" value="3">
+            <label for="apply3">개발 환경 개선</label>
+        </blockquote>
+
+        <h3>지원 동기</h3>
+        <textarea name="intro" id="intro" cols="60" rows="5">본사 지원 동기를 간략히 써 주세요.
+        </textarea>
+
+        <br>
+        <div>
+            <button type="submit">접수하기</button>
+            <button type="reset">다시 쓰기</button>
+        </div>
+    </form>
+</body>
+</html>
