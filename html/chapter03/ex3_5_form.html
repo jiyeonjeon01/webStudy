@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM DATA</title>
+    <style>
+        form{
+            width: 650px;
+            border: 1px solid black;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 400px;
+            background-color: aqua;
+        }
+        textarea {
+            margin-left: 400px;
+        }
+
+        form div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="display: none;">form data</h1>
+
+    <form action="#" method="post">
+        <label for="age">&lt;input&gt; 기본</label>
+        <input type="text" name="age" id="age"><br>
+
+        <label for="email">type="text" + 추가속성</label>
+        <input type="text" name="email" id="email" placeholder="HTML"><br>
+        
+        <label for="id">type="text" + 아이디</label>
+        <input type="text" name="id" id="id" placeholder="아이디"><br>
+        
+        <label for="pwd">type="text" + 패스워드</label>
+        <input type="password" name="pwd" id="pwd" placeholder="비밀번호"><br>
+        
+        <label for="intro">여러줄 문자 입력: &lt;textarea&gt;</label> <br>
+        <textarea name="intro" id="intro" cols="30" rows="10">
+        문자
+        </textarea>
+
+        <br>
+        <div>
+            <button type="submit">서버전송</button>
+            <button type="reset">전송취소</button>
+        </div>
+    </form>
+</body>
+</html>
