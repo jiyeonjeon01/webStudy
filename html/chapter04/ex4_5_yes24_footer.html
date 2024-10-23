@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        footer{
+            border: 2px solid red;
+        }
+        /* 푸터영역 메뉴부분 */
+        div.menu {
+            width: 960px;
+            border: 2px dotted blue;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        div.menu_item {
+            width: 500px;
+            border: 1px solid black;
+            padding: 2px;
+        }
+        div.menu_icon {
+            width: 300px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px;
+        }
+        .menu_item ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .menu_item li a{
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .menu_icon a{
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.5);
+            border: 1px solid black;
+            background-color: antiquewhite;
+            display: inline-block;
+            padding: 3px;
+            width: 150px; 
+        }
+        /* 푸터영역 메뉴내용 */
+        div.menu_content {
+            width: 960px;
+            border: 2px dotted blue;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        div.menu_content_logo{
+            width: 500px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        div.menu_content_qna{
+            width: 400px;
+            border: 1px solid black;
+        }
+     /* 푸터영역 메뉴회사로고 */
+        div.menu_company_logo {
+            width: 960px;
+            border: 2px dotted blue;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        div.menu_company_logo_1 {
+            border: 1px solid black;
+            text-align: center;
+        }
+    /* 푸터영역 메뉴끝부분 */
+        div.menu_last{
+            width: 960px;
+            border: 2px dotted blue;
+            margin: 0 auto; 
+        }
+        div.menu_last p {
+            font-size: x-small;
+        }
+
+    </style>
+</head>
+<body>
+   <footer>
+    <div class="menu">
+        <div class="menu_item">
+            <ul>
+                <li> <a href="#" target="_blank">소개</a></li>
+                <li> <a href="#" target="_blank">소개</a></li>
+                <li> <a href="#" target="_blank">소개</a></li>
+                <li> <a href="#" target="_blank">소개</a></li>
+                <li> <a href="#" target="_blank">소개</a></li>
+                <li> <a href="#" target="_blank">소개</a></li>
+                <li> <a href="#" target="_blank">소개</a></li>
+                <li> <a href="#" target="_blank">소개</a></li>
+                <li> <a href="#" target="_blank">소개</a></li>
+                <li> <a href="#" target="_blank">소개</a></li>
+            </ul>
+        </div>
+        <div class="menu_icon">
+            <img src="./media/cherry.png" alt="아이콘" width="30px">
+            <img src="./media/cherry.png" alt="아이콘" width="30px">
+            <img src="./media/cherry.png" alt="아이콘" width="30px">
+            <img src="./media/cherry.png" alt="아이콘" width="30px">
+            <a href="#" target="_blank">가족회사소개</a>
+        </div>
+    </div>
+    <div class="menu_content">
+        <div class="menu_content_logo">
+            <div class="menu_content_logo_yes">
+                <img src="./media/cake1.png" alt="yse24" width="100px">
+            </div>
+            <div class="menu_content_logo_addr">
+                <p>
+                    대표 : 김석환, 최세라 <br>
+                    주소 : 서울시 영등포구 은행로 11, 5층~6층<br>
+                    사업자등록번호 : 229-81-37000   통신판매dsfsdfsafsa<br>
+                    이메일 : yes24help@yes24.com   호스팅 <br>
+                    Copyright ⓒ YES24 Corp. All Rights  
+                </p>
+            </div>
+        </div>
+        <div class="menu_content_qna">
+            <h4>고객문의</h4>
+            <p>
+                도서/음반 1544-3800 중고샵 1566-4295 <br>
+                티켓예매 1544-6399 eBook 1:1 문의
+            </p>
+            <div>
+                <a href="#" target="_blank">1:1문의하기</a>
+                <a href="#" target="_blank">자주묻는질문</a>
+                <a href="#" target="_blank">실시간안내</a>
+            </div>
+        </div>
+    </div>
+    <div class="menu_company_logo">
+        <div class="menu_company_logo_1">
+            <p>
+                <img src="./media/bacon.png" alt="" width="60px"> <br>
+                한국산업의  <br>
+                15년 연속1위
+            </p>
+        </div>
+        <div class="menu_company_logo_1">
+            <p>
+                <img src="./media/bacon.png" alt="" width="60px"> <br>
+                한국산업의  <br>
+                15년 연속1위
+            </p>
+        </div>
+        <div class="menu_company_logo_1">
+            <p>
+                <img src="./media/bacon.png" alt="" width="60px"> <br>
+                한국산업의  <br>
+                15년 연속1위
+            </p>
+        </div>
+        <div class="menu_company_logo_1">
+            <p>
+                <img src="./media/bacon.png" alt="" width="60px"> <br>
+                한국산업의 <br>
+                15년 연속1위
+            </p>
+        </div>
+        <div class="menu_company_logo_1">
+            <p>
+                <img src="./media/bacon.png" alt="" width="60px"> <br>
+                한국산업의  <br>
+                15년 연속1위
+            </p>
+        </div>
+        <div class="menu_company_logo_1">
+            <p>
+                <img src="./media/bacon.png" alt="" width="60px"> <br>
+                한국산업의  <br>
+                15년 연속1위
+            </p>
+        </div>
+    </div>
+    <div class="menu_last">
+        <p>
+            소비자피해보상보험 서울보증보험고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 구매안전서비스를 이용하실 수 있습니다. 서비스가입사실 확인  
+        </p>
+    </div>
+   </footer> 
+    
+</body>
+</html>

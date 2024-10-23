@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: rgb(255, 242, 249);
+            height: 100vh;
+            border: 1px solid black;
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; 
+            justify-content: flex-end;
+            align-items: center; 
+            align-content: center; */
+        }
+        .item {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            
+
+        }
+        .item1, .item11, .item21 {
+            background-color: #ffcfcf;
+            /* padding: 20px;   */
+            /* order: 3; */
+            /* flex-flow: 1; */
+            /* flex-shrink: 5; */
+            /* flex-basis: 10%; */
+        }
+        .item2, .item12, .item22 {
+            background-color: #fff6cf;
+            /* order: 1; */
+            /* flex-flow: 1; */
+            /* flex-shrink: 1; */
+            /* flex-basis: 10%; */
+            align-self: flex-end;
+        }
+        .item3, .item13, .item23 {
+            background-color: #d4fff3;
+            /* order: 2; */
+            /* flex-flow: 1; */
+            /* flex-shrink: 1; */
+            /* flex-basis: 10%; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+        
+
+    </div>
+    
+</body>
+</html>
