@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPACITY</title>
+    <style>
+        img {
+            border: 3px solid black;
+            opacity: 0.3;
+        }
+        img:hover {
+            opacity: 1;
+        }
+        div>img:nth-child(3) {
+            visibility: hidden;
+        }
+        div>img:nth-child(2) {
+            display: none;
+        }
+        div>img:nth-child(2n) {
+            border: 5px dotted red;
+        }
+        div>img:first-child, div>img:last-child {
+            border-radius: 50%;
+        }
+       
+
+    </style>
+</head>
+<body>
+   <div>
+    <img src="./media/font/font_h.png" alt="">
+    <img src="./media/font/font_t.png" alt="">
+    <img src="./media/font/font_m.png" alt="">
+    <img src="./media/font/font_l.png" alt="">
+    <img src="./media/font/font_h.png" alt="">
+    <img src="./media/font/font_t.png" alt="">
+    <img src="./media/font/font_m.png" alt="">
+    <img src="./media/font/font_l.png" alt="">
+    <img src="./media/font/font_h.png" alt="">
+    <img src="./media/font/font_t.png" alt="">
+    <img src="./media/font/font_m.png" alt="">
+    <img src="./media/font/font_l.png" alt="">
+   </div>
+</body>
+</html>
