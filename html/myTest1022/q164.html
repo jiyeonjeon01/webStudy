@@ -9,21 +9,11 @@
             width: 500px;
             border: 1px solid black;
             margin: 0 auto;
-            overflow: hidden;
             padding: 10px;
         }
-        /* label {
-            display: inline-block;
-            width: 400px;
-            background-color: aqua;
+       #div1, #div2 {
+            margin-left: 40px;
         }
-        textarea {
-            margin-left: 400px;
-        }
-
-        form div {
-            text-align: center;
-        } */
     </style>
 </head>
 <body>
@@ -32,28 +22,30 @@
 
         <br>
 
-        HTML CSS, 자바스크립트의 기술을 이햏고 실무 경험이 있는 분을 찾습니다. <br>
+        <p>HTML CSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.</p><br>
 
         <hr><br>
         
         <h3>개인 정보</h3>
-        <blockquote>
+        <div id="div1">
+            <p>
             <label for="name">이름</label>
             <input type="text" name="name" id="이름" placeholder="공백 없이 입력하세요"><br>
  
             <label for="phone">연락처</label>
             <input type="text" name="phone" id="phone"><br><br>
-        </blockquote>
+            </p>
+        </div>
 
         <h3>지원 분야</h3>
-        <blockquote>
+        <div id="div2">
             <input type="radio" name="apply" id="apply1" value="1">
             <label for="ticket1">웹 퍼블리싱</label><br>
             <input type="radio" name="apply" id="apply2" value="2">
             <label for="apply2">웹 애플리케이션 개발</label><br>
             <input type="radio" name="apply" id="apply3" value="3">
             <label for="apply3">개발 환경 개선</label>
-        </blockquote>
+        </div>
 
         <h3>지원 동기</h3>
         <textarea name="intro" id="intro" cols="60" rows="5">본사 지원 동기를 간략히 써 주세요.
