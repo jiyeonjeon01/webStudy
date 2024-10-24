@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/abb02b8c73.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Rubik", sans-serif; 
+            /* font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-variant: normal; */
+        }
+        a {
+            text-decoration: none;
+        }
+        nav {
+            width: 80%;
+            margin: 0 auto;
+            padding: 8px;  
+            background-color: rgb(255, 243, 243);
+            border: 1px dotted black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        div.nav_logo {
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            justify-content: baseline;
+            align-items: center;
+
+            font-family: "Rubik", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-variation-settings: "MORF" 0;
+        }
+        div.nav_logo:hover {
+            background-color: #d79a9a;
+            border-radius: 10px;
+        }
+        div.nav_logo i {
+            color: #000000;
+            font-size: 32px;
+            margin-right: 5px;
+            
+        }
+        ul.nav_menu {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        ul.nav_menu a {
+            padding: 8px 15px;
+            border-radius: 10px;
+        }
+        ul.nav_menu a:hover {
+            background-color: #d79a9a;
+        }
+        ul.nav_icons {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        ul.nav_icons i.cloud {
+            color: #71bedb
+        }
+        ul.nav_icons.smile {
+            color: #e6d889;
+        }
+        ul.nav_icons a {
+            font-size: 20px;
+            padding: 8px 15px;
+            border-radius: 10px;
+        }
+        ul.nav_icons a:hover {
+            background-color: #d79a9a;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#">WEB CODING</a>
+        </div>
+
+        <ul class="nav_menu">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+        </ul>
+
+        <ul class="nav_icons">
+            <li><a href="#"><i class="fa-solid fa-cloud"></i></a></li>
+            <li><a href="#"><i class="fa-regular fa-face-smile"></i></a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
