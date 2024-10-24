@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/abb02b8c73.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -12,7 +15,11 @@
             padding: 0;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Rubik", sans-serif; 
+            /* font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-variant: normal; */
         }
         a {
             text-decoration: none;
@@ -35,14 +42,22 @@
             display: flex;
             justify-content: baseline;
             align-items: center;
+
+            font-family: "Rubik", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-variation-settings: "MORF" 0;
         }
         div.nav_logo:hover {
             background-color: #d79a9a;
+            border-radius: 10px;
         }
         div.nav_logo i {
             color: #000000;
             font-size: 32px;
             margin-right: 5px;
+            
         }
         ul.nav_menu {
             list-style-type: none;
@@ -54,10 +69,10 @@
         }
         ul.nav_menu a {
             padding: 8px 15px;
+            border-radius: 10px;
         }
         ul.nav_menu a:hover {
             background-color: #d79a9a;
-
         }
         ul.nav_icons {
             list-style-type: none;
@@ -75,6 +90,8 @@
         }
         ul.nav_icons a {
             font-size: 20px;
+            padding: 8px 15px;
+            border-radius: 10px;
         }
         ul.nav_icons a:hover {
             background-color: #d79a9a;
