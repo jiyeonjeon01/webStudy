@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/abb02b8c73.js" crossorigin="anonymous"></script>
+    <style>
+        /* 모든 요소에 box-sizing을 border-box로 설정하고 기본 margin과 padding을 0으로 초기화 */
+        * {
+            box-sizing: border-box; /* 요소의 padding과 border를 width와 height에 포함 */
+            margin: 0; /* 기본 margin 제거 */
+            padding: 0; /* 기본 padding 제거 */
+        }
+        
+        /* 모든 링크 스타일 설정 */
+        a {
+            text-decoration: none; /* 링크에 기본 밑줄 제거 */
+            color: rgb(67, 67, 67); 
+        }
+
+        /* header 스타일 설정 */
+        header {
+            width: 100%; /* 전체 너비 사용 */
+            padding: 10px; /* 패딩 설정 */
+            background-color: #e8c9d4; /* 배경 색상 설정 */
+            display: flex; /* Flexbox 레이아웃 사용 */
+            justify-content: space-around; /* 자식 요소 간 간격을 동일하게 분배 */
+            align-items: center; /* 수직 중앙 정렬 */
+        }
+
+        /* 로고 스타일 설정 */
+        div.header_logo {
+            font-size: 30px; 
+            white-space: nowrap; /* 줄 바꿈 없이 한 줄로 표시 */
+        }
+        
+        /* 로고에 마우스 오버 시 효과 */
+        div.header_logo:hover { 
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.445); 
+        }
+        
+        /* 검색 박스 스타일 설정 */
+        div.header_search {
+            display: flex; /* Flexbox 레이아웃 사용 */
+            align-items: center; /* 수직 중앙 정렬 */
+        }
+
+        /* 텍스트 입력 영역 스타일 설정 */
+        textarea {
+            margin-left: 10px; /* 왼쪽 여백 설정 */
+            display: flex; /* Flexbox 레이아웃 사용 */
+            border: 1px solid black; 
+            resize: none; /* 크기 조절 비활성화 */
+            border-radius: 10px; 
+            line-height: 1.7em; /* 줄 간격 설정 */
+            font-size: 1.7em; 
+            text-align: center; /* 텍스트 중앙 정렬 */
+            overflow-y: hidden; /* 세로 스크롤바 숨기기 */
+            white-space: nowrap; /* 입력을 한 줄로 제한 */
+        }
+
+        /* 검색 버튼 스타일 설정 */
+        .search_box {
+            margin-left: 10px; /* 왼쪽 여백 설정 */
+            display: flex; /* Flexbox 레이아웃 사용 */
+            align-items: center; /* 수직 중앙 정렬 */
+            justify-content: center; /* 수평 중앙 정렬 */
+            width: 80px; /* 너비 설정 */
+            background-color: #f0f0f0; 
+            border: 1px solid black; 
+            border-radius: 10px; 
+        }
+
+        /* 검색 버튼 내부 링크 스타일 설정 */
+        .search_box a {
+            font-size: 1.3em; /* 폰트 크기 설정 */
+            line-height: 1.7em; /* 줄 간격 설정 */
+            color: black; 
+        }
+
+        /* 검색 버튼 링크에 마우스 오버 시 효과 */
+        .search_box a:hover {
+            color: #e8c9d4;
+        }
+
+        /* 아이콘 리스트 스타일 설정 */
+        ul.header_icons {
+            font-size: 20px;
+            list-style-type: none; /* 기본 리스트 스타일 제거 */
+            display: flex; /* Flexbox 레이아웃 사용 */
+            justify-content: center; /* 수평 중앙 정렬 */
+            align-items: center; /* 수직 중앙 정렬 */
+        }
+
+        /* 내비게이션 메뉴 스타일 설정 */
+        ul.nav_menu {
+            margin-top: 5px; /* 상단 여백 설정 */
+            margin-left: 200px; /* 왼쪽 여백 설정 */
+            margin-right: 200px; /* 오른쪽 여백 설정 */
+            list-style-type: none; /* 기본 리스트 스타일 제거 */
+            display: flex; /* Flexbox 레이아웃 사용 */
+            font-size: 1.2em; /* 폰트 크기 설정 */
+            padding: 5px; /* 패딩 설정 */
+            justify-content: space-around; /* 자식 요소 간 간격을 동일하게 분배 */
+        }
+
+        /* 내비게이션 메뉴 항목 스타일 설정 */
+        ul.nav_menu li {
+            display: flex; /* Flexbox 레이아웃 사용 */
+            justify-content: center; /* 수평 중앙 정렬 */
+            align-items: center; /* 수직 중앙 정렬 */
+            width: 100px; /* 각 메뉴의 너비 고정 */
+            height: 50px; /* 각 메뉴의 높이 고정 */
+        }
+
+        /* 내비게이션 메뉴 항목에 마우스 오버 시 효과 */
+        ul.nav_menu li:hover {
+            border-radius: 40px;
+            background-color: #e8c9d4; 
+            color: white; 
+        }
+
+        /* 내비게이션 메뉴 항목 링크 스타일 설정 */
+        ul.nav_menu li a {
+            display: block; /* 블록 요소로 설정 */
+            text-align: center; /* 텍스트 중앙 정렬 */
+            width: 100%; /* 부모 요소의 너비에 맞춤 */
+            height: 100%; /* 부모 요소의 높이에 맞춤 */
+            color: #434343; /* 링크 텍스트 색상 설정 */
+            line-height: 50px; /* 세로 중앙 정렬 */
+        }
+
+        /* 내비게이션 메뉴 항목 링크에 마우스 오버 시 효과 */
+        ul.nav_menu li:hover a {
+            color: white; 
+        }
+
+        /* 로그인 및 회원가입 버튼 스타일 설정 */
+        #login, #signin {
+            margin: 10px; /* 여백 설정 */
+            border-radius: 10px; 
+            color: black; 
+        }
+
+        /* 로그인 및 회원가입 버튼에 마우스 오버 시 효과 */
+        #login:hover, #signin:hover {
+            border-radius: 5px; 
+            background-color: rgba(255, 255, 255, 0.445); 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_logo">
+            <a href="#"><i class="fa-solid fa-house"></i></a> 
+            <a href="#">JY Web</a> 
+        </div>
+
+        <div class="header_search">
+            <textarea name="search" id="search" rows="1" cols="60" placeholder="검색어를 입력하세요"></textarea> 
+            <div class="search_box">
+                <a href="#">Search</a> 
+            </div>
+        </div>
+
+        <ul class="header_icons">
+            <li id="login"><a href="#"><i class="fa-solid fa-arrow-right-to-bracket">로그인</i></a></li> 
+            <li id="signin"><a href="#"><i class="fa-solid fa-right-to-bracket">회원가입</i></a></li> 
+        </ul>
+    </header>
+
+    <nav>
+        <ul class="nav_menu">
+            <li><a href="#">인사말</a></li>
+            <li><a href="#">공지사항</a></li> 
+            <li><a href="#">블로그</a></li>
+            <li><a href="#">인적사항</a></li> 
+            <li><a href="#">바로가기</a></li> 
+        </ul>
+    </nav>
+</body>
+</html>
