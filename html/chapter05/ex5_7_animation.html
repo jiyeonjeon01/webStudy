@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes down {
+            0% {transform: translateY(0px) scale(1,1) rotateX(0deg);
+               }
+            50% {transform: translateY(300px) scale(2,2) rotateX(180deg);
+               
+            }
+            100%{transform: translateY(0px) scale(1,1) rotateX(0deg);
+               
+            }
+        }
+        body img:nth-child(1){
+            animation: down 3s;
+        }
+        body img:nth-child(2){
+            animation: down 4s infinite;
+        }
+        body img:nth-child(3){
+            animation: down 3s infinite alternate;
+        }
+        body img:nth-child(4){
+            animation: down 3s cubic-bezier(.17,.67,1,-0.59) 5;
+        }
+    </style>
+</head>
+<body>
+    <img src="./media/font/font_h.png" alt="">
+    <img src="./media/font/font_t.png" alt="">
+    <img src="./media/font/font_m.png" alt="">
+    <img src="./media/font/font_l.png" alt="">
+    
+</body>
+</html>
