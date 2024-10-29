@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var i, j;
+
+        for(i=1; i<=9; i++) {
+            document.write("<div>"); // 스타일 적용을 위해 추가
+            document.write("<h3>" + i + "단</h3>");
+            for(j=1; j<=9; j++) {
+                document.write(i + "X" + j + "=" + i*j + "<br>");
+            }
+            document.write("</div>"); // 스타일 적용을 위해 추가
+        }
+    </script>
+    <style>
+        div {
+            display: inline-block;
+            padding: 0 20px 30px 20px;
+            margin: 15px;
+            border: 1px solid #eee;
+            line-height: 2;
+        }
+        div h3 {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

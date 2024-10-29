@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeBg(color) {
+            var result = document.querySelector('#result');
+            result.style.backgroundColor = color;
+        }
+    </script>
+    <style>
+        /* 결과 div 크기 설정 */
+        #result {
+            display: flex;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #eee;
+            margin-top: 20px;
+            border-radius: 5%;
+        }
+        ul {
+            list-style-type: none;
+            display: flex;
+            padding-left: 0; /* 기본 패딩 제거 */
+        }
+        #green, #orange, #purple {
+            display: flex;
+            border: 1px solid #eee;
+            text-decoration: none;
+            color: black;
+            width: 80px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" onclick="changeBg('green')" id="green">Green</a></li>
+        <li><a href="#" onclick="changeBg('orange')" id="orange">Orange</a></li>
+        <li><a href="#" onclick="changeBg('purple')" id="purple">Purple</a></li>        
+    </ul>
+    <div id="result"></div>
+</body>
+</html>
