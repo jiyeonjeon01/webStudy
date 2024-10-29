@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a1 = new Array(0, 1, 2, 3, 4);
+        let a2 = [9, 8, 7, 6, 5];
+        document.write(`a1 = [${a1}]<br>`);
+        document.write(`a2 = [${a2}]<br>`);
+        let a3 = a1.concat(a2);
+        document.write(`a1.concat(a2) : ${a3}`);
+
+        // 필터링을 진행하는 이름있는 함수 
+        function filterValue(item){
+            return item > 7;
+        }
+
+        // item: 9, 8, 7, 6, 5
+
+        // 0. 길게 풀어쓴 함수
+        // let a4 = a2.filter(function(item, index, a2Array){
+        //     console.log(item, index, a2Array);
+        //     return item > 7;
+        // });
+        // 1. 화살표 함수
+        // let a4 = a2.filter(item=>item>=7);
+        // 2. 이름있는 함수
+        // let a4 = a2.filter(filterValue);
+        // 3. 익명함수
+        let a4 = a2.filter(function(item){
+            return item >= 6;
+        });
+
+        document.write(` a2.filter:[${a4}] <br>`);
+
+        // 배열속에 값을 찾아서 위치값을 요구한다. 
+        let index = a2.indexOf(6);
+        document.write(` a2.indexOf(6): ${index} <br>`);
+        //배열에 값을 삽입
+        a2.push(11);
+        document.write(` a2.push(5)-> =[${a2}] <br>`);
+        // 배열에 뒤에서 값을 빼버린다.
+        let popValue = a2.pop();
+        document.write(` a2.pop() -> =[${a2}] <br>`);
+        document.write(` popValue : ${popValue} <br>`);
+        // 배열 reverse 자기 자신의 배열 구조가 변화된다
+        let a5 = a1.reverse();
+        document.write(` a1.reverse() = [${a1}] <br>`);
+        // 배열 앞에서 값을 빼버린것 shift()
+        let shiftValue = a2.shift();
+        document.write(` a2.shift() = [${a2}] <br>`);
+        document.write(` shiftValue = ${shiftValue} <br>`);
+        // 배열 앞에서 값을 입력한 것 unshift()
+        a2.unshift(20);
+        document.write(` a2.unshift(20) = [${a2}] <br>`);
+        // 슬라이스 배열에서 해당되는 슬라이스 치즈 빼먹는 것 
+        let a6 = a2.slice(2, 4);
+        document.write(` a2.slice(2, 4) = [${a6}] <br>`);
+        // 정렬
+        let a7 = a2.sort((item1, item2) => {
+            return item2 - item1;
+        });
+        document.write(` a2.sort() = [${a7}] <br>`);
+        // 조인 배열을 문자열 변환 내가 원하는 형태로 변화
+       let dataValue =  a2.join("=");
+       document.write(` a2.join("=") = ${dataValue} <br>`);
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
