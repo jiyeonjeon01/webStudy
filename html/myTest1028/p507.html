@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = prompt("입장객은 몇 명인가요?");
+        var col = prompt("한 줄에 몇 명씩 앉습니까?");
+
+        if(num % col === 0){
+            row = parseInt(num/col);
+        }else {
+            row = parseInt(num/col) + 1;
+        }
+
+        // document.write("모두 " + row + "개의 줄이 필요합니다." );
+
+        var i, j;
+        document.write("<table>");
+        for(i=0; i<row; i++){
+            document.write("<tr>");
+            for(j=1; j<=col; j++){
+                no = i * col + j; //  좌석 번호 
+                if(no > num)  break;
+                document.write("<td> 좌석 " + no + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+    
+    <style>
+        table, td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

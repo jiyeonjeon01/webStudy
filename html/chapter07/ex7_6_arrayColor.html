@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            border: 1px solid black;
+        }
+       
+    </style>
+    <script>
+        //배경색문자열
+        const letter = "0123456789ABCDEF";
+        let count = 0;
+        let intervalID = null;  
+        function changeDivColor(){
+            if(count++ > 25){
+                clearInterval(intervalID);
+                return; 
+            }
+            let color ="#";
+            //배경색만들기
+            for(let i=0;i<6;i++){
+               const index = Math.floor(Math.random()*(15-0+1)+0);
+               color = color + letter[index]; 
+            }
+            document.write(`<div style="background-color: ${color}; "><p>${color}</p></div>`);
+        }
+
+
+        //자동으로 실행한다.
+        intervalID = setInterval(changeDivColor, 1000);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

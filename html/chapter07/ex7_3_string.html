@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const s1 = new String("web");
+        const s2 = "programming";
+
+        document.write(` s1 = ${s1} <br>`);
+        document.write(` s2 = ${s2} <br> <hr>`);
+
+        const data1 = s1.charAt(0);
+        document.write(` s1.charAt(0) = ${data1} <br>`);
+
+        const data2 = s1.concat(s2);
+        document.write(` s2.concat(s2) = ${data2} <br>`);
+
+        const index1 = s2.indexOf('i');
+        document.write(` s2.indexOf('i') = ${index1} <br>`);
+
+        const data3 = s2.replace('m', 'M');
+        document.write(` s2.replace('m', 'M') = ${data3} <br>`);
+
+        const index2 = s2.search('m');
+        document.write(` s2.search('m') = ${index2} <br>`);
+
+        const s3Array = s2.split('r');
+        document.write(` s3Array.length = ${s3Array.length} <br>`);
+        document.write(` s2.split(' ') = ${s3Array} <br>`);
+
+        for(let i=0; i<s3Array.length; i++) {
+            document.write(` s3Array[${i}] = ${s3Array[i]} <br>`);
+        }
+
+        const data4 = s2.substr(0, 4);
+        document.write(` s2.substr(0, 4) = ${data4} <br>`);
+
+        const data5 = s2.substring(3, 7);
+        document.write(` s2.substring(3, 7) = ${data5} <br>`);
+
+        const data6 = s2.slice(3, 7);
+        document.write(` s2.slice(3, 7) = ${data6} <br>`);
+
+        const data7 = s2.trim();
+        document.write(` s2.trim() = + ${data7} + <br>`);
+        document.write(` s2 = + ${s2} + <br>`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

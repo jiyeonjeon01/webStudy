@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 기본적으로 설명 div를 숨기기 */
+        #desc {
+            display: none;
+        }
+        /* 이미지 컨테이너 설정 */
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        /* 상세 설명 보기 버튼 스타일 */
+        #open {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(200, 227, 231, 0.7);
+            border: none;
+            padding: 10px 15px;
+            color: black;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        /* 상세 설명 보기 버튼 hover 효과 */
+        #open:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        /* 상세 설명 닫기 버튼 스타일 */
+        #close {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(200, 227, 231, 0.7);
+            border: none;
+            padding: 10px 15px;
+            color: black;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        /* 상세 설명 닫기 버튼 hover 효과 */
+        #close:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+    <script>
+        function showDetail() {
+            document.querySelector('#desc').style.display = "block";
+            document.querySelector('#open').style.display = "none";
+        }
+        function hideDetail() {
+            document.querySelector('#desc').style.display = "none";
+            document.querySelector('#open').style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="image-container">
+        <img src="./media/cute-cinnamoroll.png" alt="Cute Cinnamoroll" border="1px solid black">
+        <button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
+    </div>
+    <div id="desc" class="detail">
+        <h4>시나모롤(Cinnamoroll)</h4>
+        <p>시나모롤은 먼 하늘 구름 위에서 태어난 강아지예요.<br>
+            어느 날 하늘에서 하늘하늘 날아오던 시나모롤을 '카페 시나몬'의 주인 누나가 발견해 함께 살게 되었어요.<br>
+            꼬리가 마치 시나몬롤처럼 돌돌 말려있어서 '시나몬' 이라고 이름이 붙여졌어요.<br>
+            지금은 카페를 대표하는 간판 강아지로 활약 중이지요!<br>
+            특기는 큰 귀를 파닥파닥 해서 하늘을 나는 일! <br>
+            얌전하지만 붙임성이 좋아 손님들의 무릎 위에서 자버리기도 한답니다.
+        </p>
+        <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+    </div>
+</body>
+</html>

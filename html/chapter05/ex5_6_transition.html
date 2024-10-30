@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body h1:first-child {
+            transition: 1s;
+        }
+        body h1:first-child:hover {
+            text-shadow: 7px 7px 8px #57c;
+        }
+
+        body h1:nth-child(2) {
+            transition: 0.5s;
+        }
+        body h1:nth-last-child(2):hover {
+            text-shadow: 7px 7px 8px #57c;
+        }
+    </style>
+</head>
+<body>
+    <h1>마우스를 올려보세</h1>
+    <h1>transition 위치변경</h1>
+</body>
+</html>
