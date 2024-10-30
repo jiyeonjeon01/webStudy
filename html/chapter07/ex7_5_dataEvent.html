@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #divArea {
+            border: 1px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="#" method="get">
+        <p>궁금한 날짜를 입력하세요:</p>
+        <input type="number" name="year" id="year" size=10 maxlength=8> <br>
+        <input type="number" name="month" id="month" size=10 maxlength=8> <br>
+        <input type="number" name="day" id="day" size=10 maxlength=8> <br>
+        <button type="button" onclick="calculateDate();">계산</button>
+    </form>
+    <p id="today"></p>
+    <p id="result"></p>
+    <div id="result2"></div>
+    
+    <script>
+        function calculateDate(){
+            //ui 객체
+            const year = window.document.querySelector("#year").value;
+            const month  = window.document.querySelector("#month").value;
+            const day  = window.document.querySelector("#day").value;
+            const today  = window.document.querySelector("#today");
+            const result = window.document.querySelector("#result");
+            //현재날짜
+            const currentDay = new Date();
+            //사용자가 입력한날짜
+            let numMonth = parseInt(month)-1;
+            let numYear = parseInt(year);
+            let numDay = parseInt(day); 
+            const userDay = new Date(numYear,numMonth,numDay); 
+            //현재날짜 출력하기
+            today.textContent = `${currentDay.toLocaleString()}`;
+            //날짜 계산하기 사용자가입력한날짜 - 현재날짜 20000287382374/1000 =2
+            const timeDifference = (userDay - currentDay)/(1000*60*60*24); 
+            console.log('timeDifference:',timeDifference);
+            console.log('userDay:',userDay);
+            console.log('currentDay:',currentDay);
+            result.innerHTML = `${Math.floor(timeDifference)} 일 남았음`;
+            
+            let strDat1 = `${currentDay.toLocaleString()} <br>`;
+            let strDat2 = `${Math.floor(timeDifference)} 일 남았음`;
+            let strDat3 = strDat1.concat(strDat2);
+            const divArea =  document.querySelector("#result2");
+            divArea.innerHTML = strDat3;
+            divArea.style.border = "1px solid black";
+        }
+
+    </script>
+</body>
+</html>
