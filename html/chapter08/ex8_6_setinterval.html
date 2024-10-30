@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onLoad(){
+            // 객체 찾기
+            const btnStop = document.querySelector("#stop");
+            const btnStart = document.querySelector("#start");
+            const h1obj = document.querySelector("h1");
+            let intervalID = null;
+
+            // 이벤트 등록
+            btnStop.addEventListener("click", () => {
+                clearInterval(intervalID);
+            })
+
+            btnStart.addEventListener("click", () => {
+                intervalID = setInterval(letterRotate, 100);
+            });
+
+
+            // 핸들러 함수 
+            function letterRotate(){
+                let data = h1obj.textContent;
+                let firstChar = data[0];
+                let text = data.slice(1) + firstChar;
+                h1obj.textContent = text;
+            }
+            intervalID = setInterval(letterRotate, 100);
+        // letterRotate();
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <h1>programming</h1>
+    <button type="button" id="stop">정지</button>
+    <button type="button" id="start">시작</button>
+    
+</body>
+</html>
