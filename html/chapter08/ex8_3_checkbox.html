@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get" name="myform">
+        <input type="checkbox" name="food" id="food1" value="1500"> 
+        <label for="food1">추가채소1500원</label> <br>
+        <input type="checkbox" name="food" id="food2" value="1000"> 
+        <label for="food2">추가음료1000원</label> <br>
+        <input type="checkbox" name="food" id="food3" value="500"> 
+        <label for="food3">추가피클500원</label> <br>
+        <button type="button">add</button>
+    </form>
+    <hr>
+    <p class="result">추가금액: 0원</p>
+
+    <script>
+        const btn = document.querySelector('[type="button"]');
+        btn.addEventListener("click",()=>{
+            let sum = 0; 
+            const foodArray = document.myform.food;
+            const pobj = document.querySelector("p.result");  
+            foodArray.forEach((obj,i)=>{
+                if(obj.checked === true){
+                    sum += parseInt(obj.value); 
+                }
+            });
+            pobj.textContent = `추가금액: ${sum}원`; 
+        });
+
+    </script>
+    
+</body>
+</html>
+
+

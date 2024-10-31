@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    b {
+        font-size: small;
+        color: red;
+        opacity: 0.5;
+    }
+</style>
+<body>
+    <form action="#" method="get" name="login">
+        <label for="userid">사용자ID</label> <br>
+        <input type="text" name="userid" id="userid"><span></span><br>
+        <label for="pwd">패스워드</label> <br>
+        <input type="password" name="userpwd" id="pwd"><span></span><br>
+        <button type="button" >log in</button>
+    </form>
+    
+    <script>
+        //이벤트를 설정할 객체를 찾는다.
+        const btnobj = document.querySelector('[type="button"]'); 
+       
+        let check = ()=>{
+            const userid = document.login.userid;
+           const pwd = document.querySelector("#pwd"); 
+           if(userid.value.length < 8 || userid.value.length > 14){
+                userid.nextSibling.innerHTML = `<b>8글자 미만이나 14글자 초과안됩니다</b>`;
+                userid.value = "";
+                userid.focus(); 
+                return; 
+           }else{
+                userid.nextSibling.innerHTML = `<b>성공</b>`;
+           }
+           if(pwd.value.length < 8 || pwd.value.length > 12){
+                pwd.nextSibling.innerHTML = `<b>8글자 미만이나 12글자 초과안됩니다</b>`;
+                pwd.value = "";
+                pwd.focus(); 
+                return; 
+           }else{
+                pwd.nextSibling.innerHTML = `<b>성공</b>`;
+           }
+           alert("입력체크성공으로 서버전송하겠습니다."); 
+
+        }
+        
+        //이벤트 설정한다. onClick
+        btnobj.addEventListener("click",check);        
+
+    </script>
+</body>
+</html>
+
+
+
+

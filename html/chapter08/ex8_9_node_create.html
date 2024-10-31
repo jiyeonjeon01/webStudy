@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            width: 300px;
+        }
+    </style>
+    <script>
+        function onLoad() {
+            // 객체 찾기 
+            const divobj = document.querySelector("div");
+            const btnobj = document.querySelector('[type="button"]');
+            // 이벤트 리스너 등록 및 핸들러 처리 
+            btnobj.addEventListener("click", (e) => {
+                // a node 생성시킨다.
+                const aTag = document.createElement("a");
+                const brTag = document.createElement("br");
+                aTag.href = "https://www.naver.com";
+                aTag.target = "_blank";
+                aTag.textContent = "다음으로 가기";
+                aTag.style.padding = "10px";
+                aTag.style.display = "inline-block";
+                aTag.style.border = "1px solid black";
+                aTag.style.backgroundColor = "yellow";
+                aTag.style.textDecoration = "none";
+                divobj.appendChild(aTag);
+                divobj.appendChild(brTag);
+            });
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <div>
+        <h2>사이트 추가하기</h2>
+        <hr>
+
+    </div>
+    <button type="button">노드 추가하기</button>
+</body>
+</html>

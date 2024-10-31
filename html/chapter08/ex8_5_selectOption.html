@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get" name="myform">
+        <label for="animal">키우고 싶은 동물은</label> <br>
+        <select name="animal" id="animal">
+            <option value="0">선택해주세요</option>
+            <option value="1">고양이</option>
+            <option value="2">개</option>
+            <option value="3">햄스터</option>
+            <option value="4">물고기</option>
+            <option value="5">금붕어</option>
+        </select><br><br>
+
+        <button type="button">이벤트 처리</button>
+    </form>
+
+    <hr>
+
+    <p id="result">선택된 동물: 없음</p>
+
+    <script>
+        // 객체 찾기
+        const name = ["선택안함", "고양이", "개", "햄스터", "물고기", "금붕어"];
+        const btn = document.querySelector('[type="button"]');
+        const pobj = document.querySelector('p#result');
+        const animal = document.myform.animal;
+        // 이벤트 리스너 등록
+        btn.addEventListener("click", () => {
+            let index = animal.selectedIndex;
+            let result = animal.options[index].value;
+            pobj.textContent = `선택된 동물은 : ${name[result]}`;
+        });
+        // 이벤트 리스너 등록 
+        animal.addEventListener("change", () => {
+            let index = animal.selectedIndex;
+            let result = animal.options[index].value;
+            pobj.textContent = `선택된 동물은 : ${name[result]}`;
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: #ffccdd;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        function onLoad(){
+            // 변수 선언
+            const colorStr = "0123456789ABCDEF";
+            let count = 0;
+            let color = "#";
+            let timerID = null;
+            // 객체 찾기
+            const divobj = document.querySelector("div");
+            // 이벤트 처리 setInterval()
+            timerID = setInterval(styleChange, 250);
+
+            // 핸들러 기능 
+            function styleChange() {
+                count++;
+
+                if(count > 50){
+                    clearInterval(timerID);
+                }
+                // 색상값 랜덤으로 생성
+                for(let i=0; i<6; i++){
+                    let index = Math.floor(Math.random()*(15-0+1)+0);
+                    let colorValue = colorStr[index];
+                    color += colorValue;
+                }
+
+                // 화면 객체에 속성값 적용 
+                divobj.style.backgroundColor = color;
+                divobj.style.borderRadius = `${count}%`;
+                color = "#";
+            }
+        }
+    </script>
+</head>
+<body onload = "onLoad();">
+    <div></div>
+    
+</body>
+</html>
