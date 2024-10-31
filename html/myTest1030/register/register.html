@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/abb02b8c73.js" crossorigin="anonymous"></script>
+    <script src="./register.js"></script>
+    <link rel="stylesheet" href="./register.css">
+</head>
+<body onload="onLoad();">
+    <!-- header: 로고, 메뉴, 아이콘 -->
+    <header>
+        <div class="logo">
+            <a href="#">
+                <i class="fa-solid fa-house" width="10%""></i>
+                <span class="logoLetter">JY Site</span> 
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">둘러보기</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">글쓰기</a></li>
+                <li><a href="#">공지사항</a></li>
+            </ul>
+        </div>
+        <div class="icon">
+            <a href="#" class="icon1"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="icon2"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </header>
+
+    <!-- 회전목마: 사진, 왼.오버튼, 섹션버튼 -->
+    <div class="slideShow">
+        <div class="slidePic">
+            <a href="#"><img src="./media/slidePic1.png"></a>
+            <a href="#"><img src="./media/slidePic2.png"></a>
+            <a href="#"><img src="./media/slidePic3.png"></a>
+            <a href="#"><img src="./media/slidePic4.png"></a>
+            <a href="#"><img src="./media/slidePic5.png"></a>
+        </div>
+        <div class="slideSideIcon">
+            <a href="#" class="prev"><i class="fa-solid fa-circle-chevron-left"></i></a>
+            <a href="#" class="next"><i class="fa-solid fa-circle-chevron-right"></i></a>
+        </div>
+        <div class="slideFooterIcon">
+            <a href="#" class="active"><i class="fa-solid fa-circle-dot"></i></a>
+            <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+            <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+            <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+            <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+        </div>
+    </div>
+    
+
+    <!-- main: nav, secion, aside -->
+    <main>
+        <!-- nav: 왼쪽 사이드바 -->
+        <nav>
+            <p class="textP">왼쪽 사이드바인 nav 부분입니다.</p>
+        </nav>
+
+        <!-- section: 가운데 메인 -->
+        <section>
+            <p class="mainTitle">JY Register</p>
+            <div class="mainDetail">
+                
+                <div class="idSec">
+                    <p class="idTitle">아이디</p>
+                    <div class="idDetail">
+                        <input type="text" class="idDetailInput"></input>
+                        <p class="idDetailEmail">@naver.com</p>
+                    </div>
+                
+                
+                </div>
+                <div class="pwSec">
+                    <p class="pwTitle">비밀번호</p>
+                    <input type="text" class="pwDetail"></input>
+                </div>
+                <div class="repwSec">
+                    <p class="repwTitle">비밀번호 재확인</p>
+                    <input type="text" class="repwDetail"></input>
+                </div>
+                <div class="nameSec">
+                    <p class="nameTitle">이름</p>
+                    <input type="text" class="nameDetail"></input>
+                </div>
+                <div class="birthSec">
+                    <p class="birthTitle">생년월일</p>
+                    <div class="bithDetail">
+                        <input type="text" class="birthDetailYear"  placeholder="년(4자)"></input>
+                        <select class="birthDetailMonth">
+                            <option value="">월</option>
+                            <option value="01">1월</option>
+                            <option value="02">2월</option>
+                            <option value="03">3월</option>
+                            <option value="04">4월</option>
+                            <option value="05">5월</option>
+                            <option value="06">6월</option>
+                            <option value="07">7월</option>
+                            <option value="08">8월</option>
+                            <option value="09">9월</option>
+                            <option value="10">10월</option>
+                            <option value="11">11월</option>
+                            <option value="12">12월</option>
+                        </select>
+                        <input type="text" class="birthDetailDay"></input>
+                    </div>
+                </div>
+                <div class="genderSec">
+                    <p class="genderTitle">성별</p>
+                    <select class="genderDetail">
+                        <option value="">성별</option>
+                        <option value="01">남자</option>
+                        <option value="02">여자</option>
+                    </select>
+                </div>
+                <div class="emailSec">
+                    <p class="emailTitle">본인 확인 이메일<span id="soft">(선택)</span></p>
+                    <input type="text"class="emailDetail" placeholder="선택입력"></input>
+                </div>
+                <div class="phoneSec">
+                    <p class="phoneTitle">휴대전화</p>
+                    <select class="phoneCountryDetail">
+                        <option value="01">대한민국 +82</option>
+                        <option value="02">미국 +1 </option>
+                        <option value="03">중국 +86 </option>
+                        <option value="04">일본 +81 </option>
+                        <option value="05">러시아 +7</option>
+                        <option value="06">인도 +91</option>
+                    </select>
+                    <div class="phoneDetail">
+                        <input type="text" class="phoneDetailWrite"></input>
+                        <button class="phoneDetailSubmit">인증번호 받기</button>
+                    </div>
+                    <input type="text" class="phoneCodeDetail" placeholder="인증번호를 입력하세요"></input>
+                </div>
+                <a href="#"><button class="registerBtn">가입하기</button></a>  
+            </div>
+
+            <!-- <p class="mainTitle">JY Register</p>
+            <table>
+                <tr class="idTitle">
+                    <td colspan="3">아이디</td>
+                </tr>
+                <tr id="idDetail">
+                    <td colspan="2" class="idDetailInput"><input type="text"></input></td>
+                    <td class="idDetailEmail">@naver.com</p></td>
+                </tr>
+    
+                <tr class="pwTitle">
+                    <td colspan="3">비밀번호</td>
+                </tr>
+                <tr class="pwDetail">
+                    <td colspan="3"><input type="password"></input></td>
+                </tr>
+    
+                <tr class="repwTitle">
+                    <td colspan="3">비밀번호 재확인</td>
+                </tr>
+                <tr class="repwDetail">
+                    <td colspan="3"><input type="password"></input></td>
+                </tr>
+    
+                <tr class="birthTitle">
+                    <td colspan="3">생년 월일</td>
+                </tr>
+                <tr class="birthDetail">
+                    <td id="birthDetailYear">
+                        <input type="text" placeholder="년(4자)"></input>
+                    </td>
+                    <td id="birthDetailMonth">
+                        <select>
+                            <option value="">월</option>
+                            <option value="01">1월</option>
+                            <option value="02">2월</option>
+                            <option value="03">3월</option>
+                            <option value="04">4월</option>
+                            <option value="05">5월</option>
+                            <option value="06">6월</option>
+                            <option value="07">7월</option>
+                            <option value="08">8월</option>
+                            <option value="09">9월</option>
+                            <option value="10">10월</option>
+                            <option value="11">11월</option>
+                            <option value="12">12월</option>
+                        </select>
+                    </td>
+                    <td id="birthDetailDay">
+                        <input type="text" placeholder="일"></input>
+                    </td>
+                </tr>
+    
+                <tr class="genderTitle">
+                    <td colspan="3">성별</td>
+                </tr>
+                <tr class="genderDetail">
+                    <td colspan="3" class="genderSec">
+                        <select class="genderOption">
+                            <option value="">성별</option>
+                            <option value="01">남성</option>
+                            <option value="02">여성</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <tr class="emailTitle">
+                    <td colspan="3">본인 확인 이메일 <span class="soft">(선택)</span></td>
+                </tr>
+                <tr class="emailDetail">
+                    <td colspan="3">
+                        <input type="text" placeholder="년(4자)"></input>
+                    </td>
+                </tr>
+    
+                <tr class="phoneTitle">
+                    <td colspan="3">휴대전화</td>
+                </tr>
+                <tr class="phoneDetail">
+                    <td colspan="3">
+                        <select>
+                            <option value="01">대한민국 +82</option>
+                            <option value="02">미국 +1</option>
+                            <option value="03">일본 +81</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="phoneInput">
+                    <td colspan="2" class="phoneInputText">
+                        <input type="text" placeholder="전화번호 입력"></input>
+                    </td>
+                    <td class="phoneInputBtn">인증번호 받기</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" placeholder="인증번호를 입력하세요"></input>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td colspan="3"><button>가입하기</button></td>
+                </tr>
+    
+            </table> -->
+
+            
+
+
+
+
+
+        </section>
+        
+        <!-- aside: 오른쪽 사이드바 -->
+        <aside>
+            <p id="textP">오른쪽 사이드바인 aside 부분입니다.</p>
+        </aside>
+    </main>
+    
+
+    <!-- footer: 맨 아래 푸터 -->
+    <footer>
+        <p id="textP">맨 아래 푸터인 footer 부분입니다. </p>
+    </footer>
+</body>
+</html>

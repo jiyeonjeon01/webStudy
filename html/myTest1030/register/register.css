@@ -1,0 +1,489 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
+
+}
+body {
+    /* display: flex; */
+    /* padding-left: 10%; */
+}
+input {
+    resize: none; 
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    margin: 5px 0 5px 0;
+    border: none;
+    columns: 2;
+    font-size: 1em;
+}
+select {
+    font-size: 1em;
+    height: 40px;
+    width: 100%;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+header {
+    /* border: 1px solid black; */
+    width: 80%; /* 전체 화면의 80%만 차지하도록 */
+    height: 100px;
+    margin: 10px 100px 10px 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ecc1c1;
+}
+/* header의 로고 부분 */
+.logo {
+    /* border: 1px solid black; */
+    display: flex;
+    width: 20%;
+    height: 50%;
+    justify-content: start;
+    align-items: center;
+    margin: 10% auto;
+    
+}
+.logo a{
+    color: black;
+    /* transition: background-color 0.4s ease; */
+    font-size: 20px;
+}
+.logo a:hover {
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.385);
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+}
+.logoLetter {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    padding: 5% auto;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* header의 메뉴 부분 */
+.menu {
+    /* border: 1px solid black; */
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% auto;
+    font-weight: bold;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+li {
+    /* border: 1px solid black; */
+    margin: 15px;
+    font-size: 1.3em;
+}
+li a{
+    color: black;
+    /* transition: background-color 0.4s ease; */
+}
+li a:hover {
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.385);
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+}
+/* header의 아이콘 부분 */
+.icon {
+    display: flex;
+    width: 20%;
+    height: 50px;
+    justify-content: end;
+    align-items: center;
+    margin: 10% auto;
+    font-size: 30px;
+}
+.icon1, .icon2{
+    margin: 0 4% 0 4%;
+    color: black;
+    /* transition: background-color 0.4s ease; */
+}
+.icon1:hover, .icon2:hover {
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.385);
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+}
+
+
+
+
+.slideShow {
+    background-color: rgb(119, 99, 99);
+    width: 80%;
+    height: 400px;
+    position: relative;
+    margin: 10px 100px; /* 좌우 여백 조정 */
+    overflow: hidden; /* 내용이 슬라이드 영역을 넘지 않도록 설정 */
+}
+
+.slidePic {
+    display: flex; /* Flexbox를 사용하여 이미지를 가로로 나열합니다. */
+    position: relative;
+    width: 100%; /* width를 100%로 설정 */
+    height: 100%;
+    transition: transform 0.5s ease; /* 부드러운 전환 효과 추가 */
+}
+
+.slidePic a {
+    flex: 0 0 100%; /* 각 이미지를 100%의 폭을 차지하게 설정 */
+    height: 100%;
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    padding: 0; /* 여백 제거 */
+}
+
+.slidePic a img {
+    width: 100%; /* 이미지를 컨테이너에 맞게 조정 */
+    height: auto; /* 비율 유지 */
+    object-fit: cover; /* 잘림 방지 */
+}
+
+.slideSideIcon a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: rgba(222, 222, 222, 0.796);
+    font-size: 42px;
+    transform: translateY(-50%);
+    opacity: 0.5; 
+
+}
+
+
+
+
+
+.prev{
+    position: absolute;
+    margin-left: -47%;
+}
+.next{
+    position: absolute;
+    margin-left: 43%;
+}
+.slideFooterIcon {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.slideFooterIcon a{
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.633);
+    padding: 7px;
+    font-size: 24px;
+}
+.slideFooterIcon a.active {
+    color: rgb(213, 73, 9);
+}
+
+
+
+
+main {
+    display: flex;
+    width: 80%;
+    height: 830px;
+    margin: 3px solid black;
+    margin: 10px 100px 10px 100px;
+}
+nav, section, aside {
+    /* border: 1px solid black; */
+    height: 830px;
+    /* text-align: center; */
+    /* display: flex; */
+    /* align-items: center; */
+    justify-content: space-around;
+}
+nav, aside { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    /* border: 3px solid rgb(255, 0, 0); */
+    width: 20%;
+    text-align: center;
+    justify-self: center;
+    background-color: #f1e3e3;
+    margin-left: 0px;
+}
+
+
+section {
+    /* border: 3px solid rgb(0, 255, 89); */
+    width: 60%;
+    margin: 0 15px 0 15px;
+    padding: 5px;
+    justify-content: center;
+    background-color: #ffe1e1;
+}
+
+.mainTitle {
+    margin: 10px;
+    height: 50px;
+    font-size: 1.7em;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}
+.mainDetail {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.422);
+    margin: 5px 10px 5px 10px;
+    padding: 0 10px 0 10px;
+}
+
+.idSec {
+    margin-top: 5px;
+
+}
+.idDetail {
+    display: flex;
+}
+.idDetailInput {
+    margin-right: 5px;
+    width: 60%;
+}
+.idDetailEmail {
+    width: 40%;
+    padding-left: 10px;
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+    background-color: white;
+    font-size: 100%;
+    text-align: start;
+    text-overflow: clip;
+    color: #969696;
+    justify-content: center;
+    line-height: 35px;
+}
+.pwSec {
+    margin-top: 5px;
+}
+.repwSec {
+    margin-top: 5px;
+}
+.nameSec {
+    margin-top: 5px;
+}
+
+
+
+.birthSec {
+    
+    margin-top: 5px;
+}
+.birthDetail {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    width: 100%; 
+}
+
+.birthDetailYear, 
+.birthDetailMonth, 
+.birthDetailDay {
+    width: 32% ;
+    
+}
+
+
+
+.nameSec {
+    margin-top: 5px;
+}
+.genderSec {
+    margin-top: 5px;
+}
+.emailSec {
+    margin-top: 5px;
+}
+#soft {
+    color: #969696;
+}
+.phoneSec {
+    margin-top: 5px;
+}
+.phoneDetail {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    align-items: center;
+    
+}
+.phoneDetailWrite {
+    height: 40px;
+    width: 80%;
+}
+.phoneDetailSubmit {
+    height: 40px;
+    width: 20%;
+    margin-left: 10px;
+    border: none;
+    background-color: #ecc1c1;
+}
+.registerBtn {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #ecc1c1;
+}
+
+
+
+
+
+
+
+
+
+/* table {
+    width: 100%;
+    margin: 5px 0;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+tr td {
+    padding: 5px;
+}
+
+tr td[colspan="3"] {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.idTitle, .pwTitle, .repwTitle, .birthTitle, .genderTitle, .emailTitle, .phoneTitle {
+    font-weight: bold;
+}
+
+#soft {
+    color: #969696;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border: none;
+}
+
+input[type="text"]:placeholder, input[type="password"]:placeholder {z
+    color: #969696;
+}
+
+.idDetailInput {
+    width: 60%;
+    height: 40px;
+    margin-right: 5px;
+}
+
+.idDetailEmail {
+    width: 40%;
+    padding-left: 10px;
+    height: 10px;
+    background-color: white;
+    font-size: 100%;
+    color: #969696;
+    text-align: start;
+    line-height: 35px;
+}
+.birthDetail {
+    width: 100%;
+}
+
+#birthDetailYear, #birthDetailMonth, #birthDetailDay {
+    width: 33.33%;
+    padding: 5px;
+    text-align: center;
+}
+
+#birthDetailYear input,
+#birthDetailDay input,
+#birthDetailMonth select {
+    width: 100%; 
+    height: 40px;
+    padding: 5px;
+    border: none;
+    font-size: 1em;
+}
+.phoneInputText input {
+    width: 80%;
+}
+
+.phoneInputBtn {
+    width: 20%;
+    height: 40px;
+    margin-left: 10px;
+    border: none;
+    background-color: #ecc1c1;
+    text-align: center;
+    line-height: 40px;
+}
+
+.registerBtn {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #ecc1c1;
+} */
+
+
+
+
+
+
+
+
+
+
+aside {
+    /* border: 1px solid rgb(14, 2, 255); */
+    width: 20%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1e3e3;
+    margin-right: 0px;
+}
+
+footer {
+    margin: 10px 100px 10px 100px;
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1e3e3;
+}
