@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            border: 1px solid black;
+            transform: rotate(60deg);
+            margin-top: 50px;
+            width: 200px;
+
+        }
+    </style>
+    <script>
+        function onLoad() {
+            // 각도 변수 
+            let deg = 0;
+            // 객체 찾기
+            const img = document.querySelector('[src="./media1/slidePic1.png"]');
+
+            // 이벤트 리스너 등록 및 핸들러 기능 구현
+            img.addEventListener("click", () => {
+                deg += 90;
+                img.style.transform = `rotate(${deg}deg)`;
+            });
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <p>이미지를 클릭해보세요</p>
+    <img src="./media1/slidePic1.png">
+</body>
+</html>
