@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    margin: 0px;
+    margin: 0;
     padding: 0px;
     
 
@@ -8,6 +8,7 @@
 body {
     /* display: flex; */
     /* padding-left: 10%; */
+    margin: 0 auto;
 }
 input {
     resize: none; 
@@ -199,7 +200,7 @@ li a:hover {
     font-size: 24px;
 }
 .slideFooterIcon a.active {
-    color: rgb(213, 73, 9);
+    color: rgb(222, 165, 165);
 }
 
 
