@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p, h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>자동스크롤</h2>
+    <script>
+        //변수 
+        let position = 0; 
+        for(let i=1;i<=30;i++){
+            document.write("<hr>");
+            document.write(`<p>${i}</p>`); 
+        }
+        
+        //setInterval 기능
+        setInterval(()=>{
+            window.scrollBy(0,50);
+            position = position + 50;  
+            if(position >= window.innerHeight + 50 ){
+                position = 0; 
+                window.scrollTo(0,0); 
+            }
+        },400); 
+    </script>
+    
+</body>
+</html>
