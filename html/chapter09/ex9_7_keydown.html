@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onLoad(){
+            //변수선언
+            let wb = 0; 
+            //객체찾기
+            const img = document.querySelector("img"); 
+            //이벤트등록및 핸들러처리
+            window.document.addEventListener("keydown",(e)=>{
+               if(e.key==="ArrowLeft"){
+                    wb = wb - 10;
+                    if(wb < 0) wb = 0;  
+               }else if(e.key==="ArrowRight"){
+                    wb = wb + 10; 
+                    if(wb > 300) wb = 300; 
+               }else{
+                    alert("오른쪽키와 왼쪽키만 허용합니다");
+                    return;  
+               }
+               img.style.transform = `translateX(${wb}px)`;
+               
+            });
+
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <h3>이미지를 좌우키보드를 누르면 이동합니다.</h3>
+    <img src="./media/photo1.jpg" alt="">
+</body>
+</html>
