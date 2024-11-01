@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onLoad() {
+            // 객체 찾기
+            const close = document.querySelector("#close");
+            const userid = document.querySelector("#userid");
+            const pwd = document.querySelector("#pwd");
+            
+            // 이벤트 리스너 등록 및 핸들러 처리
+            close.addEventListener("click", () => {
+                // 부모창을 찾는다.
+                const pwin = window.opener;
+                pwin.document.querySelector("#userid").value = userid.value;  
+                pwin.document.querySelector("#pwd").value = pwd.value;  
+                window.close();
+            });
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <form action="#" method="get" name="login">
+        <label for="userid">사용자ID</label> <br>
+        <input type="text" name="userid" id="userid"><span></span><br>
+        <label for="pwd">패스워드</label> <br>
+        <input type="password" name="userpwd" id="pwd"><span></span><br>
+        <button type="button">전송하기</button>
+    </form>
+    <hr>
+    <button type="button" id="close">팝업창닫기</button>
+</body>
+</html>

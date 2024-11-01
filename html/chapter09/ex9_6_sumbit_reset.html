@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onLoad(){
+            //객체찾기
+            const myform = window.document.myform;
+            const id = window.document.myform.id;
+            const pwd = window.document.myform.pwd;
+            const chkID = "kdj";
+            const chkPWD = "1234"; 
+
+            //이벤트리스너 등록및 핸들러처리
+            myform.addEventListener("submit",(event)=>{
+                event.preventDefault(); //원래성질의 기능 이벤트를 막는다(서버로 전송기능막음)
+               //패턴검색
+               //값체크
+               if(id.value !== chkID){
+                    id.nextSibling.textContent = "아이디가 맞지 않습니다.";
+                    id.value = ""; 
+                    id.focus();
+                    return; 
+               }else{
+                    id.nextSibling.textContent = "성공";
+               }
+               if(pwd.value !== chkPWD){
+                    pwd.nextSibling.textContent = "패스워드가 맞지 않습니다.";
+                    pwd.value = ""; 
+                    pwd.focus();
+                    return; 
+               }else{
+                    pwd.nextSibling.textContent = "성공";
+               }
+               myform.submit(); //서버에 데이터를 전송하고 폼에 있는 데이터는 reset
+               
+            });
+
+
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <form action="#" method="get" name="myform">
+        <label for="id">ID입력:</label>
+        <input type="text" name="id" id="id" placeholder="테스트"><span></span><br>
+        <label for="pwd">pwd입력:</label>
+        <input type="password" name="pwd" id="pwd" placeholder="암호입력"><span></span> <br>
+        <button type="submit">전송하기</button>
+        <button type="reset">취소하기</button>
+    </form>
+    <hr>
+    <p></p>
+    
+</body>
+</html>

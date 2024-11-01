@@ -1,0 +1,117 @@
+/* 회원가입 */
+#div-main{
+  width: 100%;
+  margin: 0 auto;
+}
+input[type=text],[type=password],[type=email],[type=tel],[type=date],[type=address]{
+  background-color: whitesmoke;
+  border:1px solid LightGrey;
+  height: 20px;
+}
+h4, #btns-bottom{
+  text-align: center;
+  letter-spacing: 5px;
+}
+.title-table{
+  width: 900px;
+  margin: 0 auto;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+table{
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-top:1px solid LightGrey;
+  border-bottom:1px solid LightGrey;
+  border-collapse: collapse;
+}
+tr,td{
+  border: 1px solid LightGrey;
+}
+.col-key{
+  background-color: whitesmoke;
+  font-weight: bold;
+  font-size: 12px;
+  width: 100px;
+}
+td{
+  padding: 10px;
+  font-size: 11px;
+}
+#input-address>input{
+  margin-bottom: 3px;
+}
+
+#btn-serchAddr{
+  border:0px;
+  background-color: black;
+  color: white;
+  font-size: 11px;
+}
+#btns-submit{
+  text-align: center;
+}
+#btn-join{
+  border:0px;
+  background-color: Deeppink;
+  color: white;
+  height: 30px;
+  width: 60px;
+  font-size: 11px;
+}
+#btn-cancel{
+  font-size: 11px;
+  border:1px solid LightGrey;
+  height: 30px;
+}
+
+
+/* 로그인  */
+body{
+  width: 100%;
+  margin: auto;
+}
+*{
+  font-size: 12px;
+  font-color: darkgrey;
+}
+body>div{
+  width: 300px;
+  margin: 0 auto;
+}
+form{
+  width:400px;
+  height:100px;
+}
+#big-login{
+  height:58px;
+  width: 90px;
+  margin-left: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: crimson;
+  border:0;
+  font-size: 16px;
+}
+.div-float {
+  display: inline-block;
+  float: left;
+}
+button>a{
+  text-decoration: none;
+}
+#otp-login{
+  margin: 7px 0 12px 12px;
+}
+#btns-bottom{
+  margin-top: 14px;
+  text-align: justify;
+}
+#btns-bottom>button{
+  padding-right: 21px;
+}
+a:visited{
+  font-color: darkgrey;
+}
