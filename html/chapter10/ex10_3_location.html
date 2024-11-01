@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>현재 페이지는 location 객체를 테스팅하는 화면입니다.</h1>
+    <form action="#" method="get">
+        <input type="number" name="site" id="site" max="2" min="0">
+    </form>
+    <button type="button">요청하기</button>
+
+    <script>
+        // 변수 선언
+        let win = null;
+        let count = 0; // 내가 추가
+        const siteArray = new Array();
+        siteArray[0] = "https://www.naver.com";
+        siteArray[1] = "https://www.nate.com";
+        siteArray[2] = "https://www.daum.com";
+
+        // 객체 찾기
+        const number = document.querySelector('[type="number"]');
+        const btn = document.querySelector('[type="button"]');
+        const btnCancel = document.querySelector('#cancel');
+
+        // 이벤트 리스너 등록 및 핸들러 처리 
+        btn.addEventListener("click", () => {
+            const no = window.parseInt(number.value);
+            if(no<0 || no>=3){
+                alert("0~3번까지만 입력해주세요");
+                return;
+            }
+            win = window.open(siteArray[no], "_blank", "width=400, height=400, left=100, top=100");
+        });
+        btnCalcel.addEventListener("click", () => {
+            win.close();
+        });
+
+        
+        
+       
+    </script>
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>현재 페이지는 location 객체를 테스팅하는 화면입니다.</h1>
+    <script>
+        const siteArray = ["https://www.naver.com", "https://www.nate.com", "https://www.daum.com"];
+        let win = null;
+        let count = 0;
+
+        const timerID = setInterval(() => {
+            // Close the existing window if it's open
+            if (win !== null) {
+                win.close();
+            }
+
+            // Open a new window with the next site
+            win = window.open(siteArray[count % siteArray.length], "_blank", "width=400, height=400, left=100, top=100");
+
+            // Increment the count
+            count++;
+
+            // Clear the interval after opening 10 windows
+            if (count > 10) {
+                clearInterval(timerID);
+            }
+        }, 2000);
+    </script>
+</body>
+</html> -->
